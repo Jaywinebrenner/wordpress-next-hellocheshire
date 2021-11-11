@@ -1,0 +1,14 @@
+.cta-banner {
+    background-color: grey;
+    padding: 24px;
+    display: flex;
+    justify-content: center; 
+
+    &__button {
+      background-color: yellow;
+
+      &--red {
+        background-color: red;
+      }
+    }
+}
