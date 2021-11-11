@@ -18,10 +18,7 @@
         justify-content: center;
         flex-direction: column;
     }
-    img {
-        // min-width: 350px;
-        // height: 350px;
-    }
+
     p {
         line-height: 1.3;
         font-size: small;
@@ -36,11 +33,11 @@
 
 @media only screen and (max-width: 950px) {
     .info {
-      background-color: lightyellow;
+    //   background-color: lightyellow;
       flex-direction: column-reverse;
 
       &__image-col {
-        flex: 0 0 5rem 0;
+        flex: 0 0 5rem;
         padding-bottom: 6rem;
       }
       &__text-col {

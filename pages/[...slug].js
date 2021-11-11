@@ -6,6 +6,7 @@ import Navbar from '../components/parts/Navbar';
 import React, { useState } from 'react';
 import CtaBanner from '../components/parts/CtaBanner';
 import Info from '../components/parts/Info';
+import Footer from '../components/parts/Footer';
 
 export default function Page({page}) {
 
@@ -78,6 +79,21 @@ export default function Page({page}) {
                     buttonLink={layout.button_link}
                     buttonText={layout.button_text}
                     content={layout.content}
+                />
+            )
+        }
+
+        if(layout.acf_fc_layout === "footer") {
+            return (
+                <Footer
+                    header={layout.header}
+                    buttonOneText={layout.button_one_text}
+                    buttonTwoText={layout.button_two_text}
+                    buttonThreeText={layout.button_three_text}
+                    bgImageOne={layout.background_image_one.url}
+                    bgImageTwo={layout.background_image_two.url}
+                    footerIcon={layout.footer_icon.url}
+                    address={layout.address}
                 />
             )
         }

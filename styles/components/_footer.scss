@@ -1,130 +1,89 @@
+
+
+
 .footer {
-    position: relative;
-    padding-top: 60px;
-    overflow: hidden;
-  
-    @media(max-width: 50px) {
-      padding-top: 0;
-    }
-  
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 50%;
-      z-index: -1;
-      background-image: url("/images/footer-bg.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-  
-      @media(max-width: 50px) {
-        background: none;
-      }
-    }
-  
-    &__inner {
-      background-image: url("/images/clouds/cloudsFooter.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 95%;
-      padding: 50px;
-      position: relative;
-  
-      @media(max-width: 50px) {
-        width: 100%;
-        padding: 30px;
-      }
-  
-      &::after {
-        content: "";
-        position: absolute;
-        top: calc(46.5% + 80px);
-        right: -80px;
-        z-index: -1;
-        width: 80px;
-        height: 80px;
-        background-image: url("/images/circles/quarter4.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-  
-        @media(max-width: 50px) {
-          display: none;
-        }
-      }
-    }
-  
-    &__content {
-      background-color: white;
-      padding: 32px;
-  
-      p {
-        margin: 0;
-        font-weight: 700;
-        text-align: center;
-      }
-    }
-  
-    &__button-list {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      padding: 0 30px;
-  
-      @media(max-width: 850px) {
-        flex-direction: column;
-      }
-  
-      .btn {
-        margin-left: 12px;
-        margin-right: 12px;
-        min-width: 200px;
-        text-align: center;
-  
-        @media(max-width: 850px) {
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 12px;
-          margin-bottom: 12px;
-          width: 100%;
-          min-width: 0;
-        }
-      }
-    }
-  
-    hr {
-      margin-top: 32px;
-      margin-bottom: 32px;
-      max-width: 670px;
-    }
-  
-    &__learn-more-wrapper {
-      text-align: center;
-      margin-top: 30px;
-  
-      .link span {
-        position: relative;
-        display: flex;
-  
-        &::after {
-          content: "";
-          display: inline-block;
-          width: 16px;
-          height: 16px;
-          background-image: url("/images/icons/expand.svg");
-          background-repeat: no-repeat;
-          background-size: contain;
-          margin-left: 12px;
-        }
-      }
-    }
-  
-    &__after {
-      display: block;
-      padding: 50px;
-      text-align: center;
-    }
+  background: lightyellow;
+  padding-top: 3rem;
+  overflow: hidden;
+  // background-image: url("/images/tan.jpeg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    z-index: -1;
+    background-image: url("/images/tan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
+
+
+  &__container {
+    // background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    margin: 0 7rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+    background-image: url("/images/gray.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // &--button-wrapper {
+    //   margin-bottom: 30px;
+    // }
+    &--inner {
+      background-color: rgb(253,248,245);
+      padding: 40px;
+    }
+    &--link-wrapper {
+      position: relative;
+      .icon {
+        width: 30px;
+        position: absolute;
+        right: -35px;
+        top: 0;
+       cursor: pointer;
+      }
+    }
+  }
+  &--logo-wrapper {
+    text-align: center;
+    padding: 40px 0;
+  }
+ 
+  button {
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    width: 190px;
+    border:none; 
+    border: 1px solid rgb(218,191,173);
+    background-color: rgb(253,248,245);
+  }
+  img {
+    width: 3rem;
+        margin: auto;
+        display: block;
+  }
+  hr {
+    padding: 0 10px;
+    margin: 30px 0;
+  }
+  p {
+    margin: 0;
+    font-weight: 100;
+    color: gray;
+    font-size: small;
+  }
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
