@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import CtaBanner from '../components/parts/CtaBanner';
 import Info from '../components/parts/Info';
 import Footer from '../components/parts/Footer';
+import Medtech from '../components/parts/Medtech';
 
 export default function Page({page}) {
 
@@ -94,6 +95,22 @@ export default function Page({page}) {
                     bgImageTwo={layout.background_image_two.url}
                     footerIcon={layout.footer_icon.url}
                     address={layout.address}
+                />
+            )
+        }
+
+        if(layout.acf_fc_layout === "medtech") {
+            return (
+                <Medtech
+                    navTextOne={layout.nav_text_one}
+                    navTextTwo={layout.nav_text_two}
+                    navTextThree={layout.nav_text_three}
+                    navTextFour={layout.nav_text_four}
+                    title={layout.title}
+                    description={layout.description}
+                    image={layout.image.url}
+                    navIcon={layout.nav_icon.url}
+                  
                 />
             )
         }

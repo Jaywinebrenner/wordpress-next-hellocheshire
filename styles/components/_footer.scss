@@ -2,29 +2,14 @@
 
 
 .footer {
-  background: lightyellow;
+  background: rgb(253,248,245);
   padding-top: 3rem;
   overflow: hidden;
   // background-image: url("/images/tan.jpeg");
   // background-repeat: no-repeat;
   // background-size: cover;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 50%;
-    z-index: -1;
-    background-image: url("/images/tan.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-
 
   &__container {
-    // background-color: lightgray;
     display: flex;
     flex-direction: column;
     margin: 0 7rem;
@@ -35,38 +20,72 @@
     background-image: url("/images/gray.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    // &--button-wrapper {
-    //   margin-bottom: 30px;
-    // }
+    @media only screen and (max-width: 1070px) {
+      margin: 30px;
+      body {
+        font-size: 12px
+      }
+    }
+
     &--inner {
       background-color: rgb(253,248,245);
-      padding: 40px;
+      padding: 20px 40px;
+      width: 100%;
+      
     }
     &--link-wrapper {
       position: relative;
-      .icon {
-        width: 30px;
-        position: absolute;
-        right: -35px;
-        top: 0;
-       cursor: pointer;
+      margin: 0 auto;
+      text-align: center;
+      .link span {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 410px;
+          right: 0;
+          bottom: 50%;
+          width: 30px;
+          height: 30px;
+          // background-image: url("/images/icons/weasel.svg");
+          background-image: url("https://freesvg.org/img/Fisher-1-.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
       }
+
+      // img {
+      //   position: absolute;
+      //   width: 30px;
+      //   top: 0;
+      //   right: 250;
+      //   cursor: pointer;
+      // }
     }
   }
   &--logo-wrapper {
     text-align: center;
     padding: 40px 0;
   }
- 
   button {
     padding: 10px;
     margin: 0 10px;
     cursor: pointer;
     width: 190px;
     border:none; 
-    border: 1px solid rgb(218,191,173);
+    border: 2px solid rgb(218,191,173);
     background-color: rgb(253,248,245);
+    @media only screen and (max-width: 1070px) {
+      display: block;
+      margin: 10px auto;
+      width: 100%;
+    }
   }
+
   img {
     width: 3rem;
         margin: auto;
@@ -87,3 +106,4 @@
     text-decoration: underline;
   }
 }
+

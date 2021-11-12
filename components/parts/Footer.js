@@ -16,10 +16,10 @@ export default function Footer({header, buttonOneText, buttonTwoText, buttonThre
             </div>
               <hr></hr>
             <div className="footer__container--link-wrapper">
-                <Link href="www.bing.com">
-                    <a>LEARN MORE</a>
-                </Link>
-                <img className="icon" src="/images/box.png"/> 
+            
+                <a className="link"><span>LEARN MORE</span></a>
+       
+                {/* <img className="icon" src="/images/box.png"/>  */}
             </div>
           </div>
       </div>
