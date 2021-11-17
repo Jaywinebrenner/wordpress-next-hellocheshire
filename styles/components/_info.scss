@@ -55,6 +55,12 @@
       img {
         width: 90%
       }
-    
+    }
+  }
+
+  @media screen and (max-width: 950px) and (min-width: 620px) {
+    .info__image-col {
+      width: 70%;
+      margin: 0 auto;
     }
   }

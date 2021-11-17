@@ -22,9 +22,13 @@
     background-size: cover;
     @media only screen and (max-width: 1070px) {
       margin: 30px;
-      body {
+      h4 {
         font-size: 12px
       }
+    }
+    .box-icon {
+      width: 30px;
+      left: 160px;
     }
 
     &--inner {
@@ -37,34 +41,34 @@
       position: relative;
       margin: 0 auto;
       text-align: center;
-      .link span {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 410px;
-          right: 0;
-          bottom: 50%;
-          width: 30px;
-          height: 30px;
-          // background-image: url("/images/icons/weasel.svg");
-          background-image: url("https://freesvg.org/img/Fisher-1-.png");
-          background-repeat: no-repeat;
-          background-size: contain;
-        }
-
-      }
-
-      // img {
-      //   position: absolute;
-      //   width: 30px;
-      //   top: 0;
-      //   right: 250;
-      //   cursor: pointer;
+      width: 200px;
+      // .link span {
+      //   position: relative;
+      //   display: flex;
+      //   flex-direction: column;
+      //   &::after {
+      //     content: "";
+      //     position: absolute;
+      //     top: 0;
+      //     left: 410px;
+      //     right: 0;
+      //     bottom: 50%;
+      //     width: 30px;
+      //     height: 30px;
+      //     // background-image: url("/images/icons/weasel.svg");
+      //     background-image: url("https://freesvg.org/img/Fisher-1-.png");
+      //     background-repeat: no-repeat;
+      //     background-size: contain;
+      //   }
       // }
+
+      img {
+        position: absolute;
+        width: 30px;
+        top: 0;
+        right: 250;
+        cursor: pointer;
+      }
     }
   }
   &--logo-wrapper {
@@ -82,7 +86,9 @@
     @media only screen and (max-width: 1070px) {
       display: block;
       margin: 10px auto;
-      width: 100%;
+    }
+    @media only screen and (max-width: 600px) {
+        width: 100%;
     }
   }
 

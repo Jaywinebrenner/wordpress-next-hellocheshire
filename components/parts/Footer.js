@@ -19,7 +19,7 @@ export default function Footer({header, buttonOneText, buttonTwoText, buttonThre
             
                 <a className="link"><span>LEARN MORE</span></a>
        
-                {/* <img className="icon" src="/images/box.png"/>  */}
+                <img className="box-icon" src="/images/box.png"/> 
             </div>
           </div>
       </div>
