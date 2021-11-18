@@ -8,6 +8,7 @@
 @import "components/info.scss";
 @import "components/footer.scss";
 @import "components/medtech.scss";
+@import "components/westedgeTeam.scss";
 
 html,
 body {
@@ -36,6 +37,27 @@ img {
   max-width: 100%;
   display: block;
 }
+
+
+.westedge{
+  &__nav {
+    background-color: rgb(231,222,219);
+    height: 50px;
+    // text-align: left;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    p {
+      line-height: .7;
+    }
+    a {
+      color: black;
+      padding-top: 10px;
+      margin-right: 20px;
+    }
+  }
+}
+
 
 
 
