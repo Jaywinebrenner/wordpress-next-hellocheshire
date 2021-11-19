@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 
 import WestedgeTeam from '../../components/parts/WestedgeTeam';
+import WestedgeNav from '../../components/parts/WestedgeNav';
 
 export default function Page({page}) {
 
@@ -26,6 +27,7 @@ export default function Page({page}) {
   return (
     <div className="westedge">
       <div className="westedge__nav"><p>Westedge Clone</p><a href="/">Home</a></div>
+      <WestedgeNav/>
       {builderArray}
     </div>
   )
