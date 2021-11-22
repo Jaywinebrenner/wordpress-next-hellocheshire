@@ -8,14 +8,13 @@ import WestedgeNav from '../../components/parts/WestedgeNav';
 
 export default function Page({page}) {
 
-    console.log("WE PAGE", page)
+    console.log("WE PAGE", page);
 
-
-
-  const builderArray = page[0]?.acf.builder?.map((layout) => {
+  const builderArray = page[0]?.acf.builder?.map((layout, i) => {
     if(layout.acf_fc_layout === "team") {
       return (
         <WestedgeTeam
+            key={`westedge-builder-${i}`}
             contact_row={layout.contact_row}
             content_row={layout.content_row}
             sub_image_url={layout.sub_image.url}
@@ -38,7 +37,7 @@ export default function Page({page}) {
 // Reason for &_embed ??? I forgot.
 export async function getServerSideProps({params}) {
 
-    const page = await fetch(`https://api.westedgela.com/wp-json/wp/v2/pages?slug=${params.slug}`).then((res) => res.json());
+  const page = await fetch(`https://api.westedgela.com/wp-json/wp/v2/pages?slug=${params.slug}`).then((res) => res.json());
 
   return {
     props: {

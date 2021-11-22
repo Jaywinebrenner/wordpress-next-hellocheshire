@@ -132,22 +132,11 @@ export default function Page({page, westedgeTeam}) {
 
   })
 
-  // const westedgeBuilderArray = westedgeTeam[0]?.acf.builder?.map((layout) => {
-  //   if(layout.acf_fc_layout === "team") {
-  //     return (
-  //       <WestedgeTeam
-  //           contact_row={layout.contact_row}
-  //           content_row={layout.content_row}
-  //           sub_image_url={layout.sub_image.url}
-  //           main_image_url={layout.main_image.url}
-  //       />
-  //     )
-  //   }})
+
 
   return (
     <div home>
       {builderArray}
-      {/* {westedgeBuilderArray} */}
     </div>
   )
 }
@@ -157,8 +146,6 @@ export default function Page({page, westedgeTeam}) {
 // Reason for &_embed ??? I forgot.
 export async function getServerSideProps({params}) {
     const page = await fetch(`http://localhost:8888/learning-backend/wp-json/wp/v2/pages?slug=${params.slug[0]}&_embed`).then((res) => res.json());
-
-    // const westedgeTeam = await fetch(`https://api.westedgela.com/wp-json/wp/v2/pages?slug=team`).then((res) => res.json());
 
 
   return {

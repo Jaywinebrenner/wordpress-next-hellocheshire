@@ -22,11 +22,12 @@ export default function Page({page, westedgeTeam}) {
   console.log("page", page[0].acf.builder)
     // const image = page[0]._embedded['wp:featuredmedia'][0].source_url
 
-  const builderArray = page[0]?.acf.builder?.map((layout) => {
+  const builderArray = page[0]?.acf.builder?.map((layout, i) => {
 
     if(layout.acf_fc_layout === "navbar") {
       return (
           <Navbar
+              key={`builder-${i}`}
               title={layout.title}
               link_one={layout.link_one}
               link_two={layout.link_two}

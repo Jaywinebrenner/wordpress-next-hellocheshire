@@ -19,23 +19,20 @@ export default function WestedgeTeam({main_image_url, contact_row, content_row, 
           <hr></hr>
           <div className="content">
 
-            <div className="content--row">
-              <p>Ownership</p>
-              <div className="content--row--image-wrapper">
-                <img className="logo" src="/images/Hines.svg"/> 
-                <img className="logo" src="/images/USAA.svg"/> 
-                <img className="logo" src="/images/Philena.svg"/> 
-              </div>
-            </div>
-
-            <div className="content--row">
-              <p>Architecture</p>
-              <div className="content--row--image-wrapper">
-                <img className="logo" src="/images/Gensler.svg"/> 
-                <img className="logo" src="/images/ACMartin.svg"/> 
-                <img className="logo" src="/images/Group-1.svg"/> 
-              </div>
-            </div>
+            {content_row.map((con, i) => {
+              return (
+                <div className="content--row" key={`content-row-row-${i}`}>
+                  <p>{con.row.title}</p>
+                  <div className="content--row--image-wrapper">
+                    {con.row.logos.map((img, i) => {
+                      return (
+                        <img className="logo" src={img.logo.url} key={`content--row--image-wrapper${i}`}/> 
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })}
 
           </div>
         </div>
@@ -51,20 +48,20 @@ export default function WestedgeTeam({main_image_url, contact_row, content_row, 
 
 
       <div className="westedge-team--contact-wrapper">
-          {contact_row.map((contact) => {
+          {contact_row.map((contact, i) => {
               console.log("contact",contact)
               return (
                 <>
-                  <div className="contact-col">
-                    <h3>{contact.contact.title}</h3>
-                    <p>{contact.contact.contacts.map((con) => {
+                  <div className="contact-col" key={`contact-col-${i}`}>
+                    <h3 key={`team-title-${i}`}>{contact.contact.title}</h3>
+                    {contact.contact.contacts.map((con, i) => {
                       return (
-                        <div>
+                        <div key={`contact-name-phone-${i}`}>
                           <p className="name">{con.name}: <span className="phone">{con.phone}</span></p>
                           <p></p>
                         </div>
                       )
-                    })}</p>
+                    })}
                   </div>
                 </>
               )

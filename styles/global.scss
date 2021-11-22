@@ -57,6 +57,17 @@ img {
       color: black;
       padding-top: 10px;
       margin-right: 20px;
+      text-decoration: none;
+      &::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        transition: all 0.15s linear;
+        background: red;
+        left: 0;
+        bottom: 0;
+      }
     }
   }
 }

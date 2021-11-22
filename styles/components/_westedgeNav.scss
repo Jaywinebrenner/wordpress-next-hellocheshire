@@ -1,4 +1,4 @@
-
+$gradient-brand: linear-gradient(90deg, #ff2700 0%, #ff8700 60.01%, rgba(255, 132, 0, 0.69) 99.49%);
 
 .westedgeNav {
     display: flex;
@@ -13,10 +13,54 @@
 
     }
     &__right {
-        a {
-            color: gray;
-            margin: 5px 15px 0 15px
-        }
 
-    }
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 300ms;
+            position: relative;
+            font-weight: 300;
+            color: gray;
+            margin: 0 20px;
+      
+            &::after {
+              content: "";
+              width: 0;
+              height: 2px;
+              position: absolute;
+              transition: all 0.15s linear;
+              background: $gradient-brand;
+              left: 0;
+              bottom: 0;
+            }
+      
+            &:hover,
+            &:focus,
+            &:active {
+              color: black;
+      
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .nav__links--open {
+            background-color: red;
+            position: absolute;
+            width: 100vw;
+            height: 300px;
+            top: 0;
+            a {
+                // display: block;
+                // text-align: center;
+            }
+            .mobile-nav-button-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
 }
