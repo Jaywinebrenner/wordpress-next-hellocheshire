@@ -1,9 +1,15 @@
 
+$border: #fdf8f5;
+
 .expandable {
+    min-height: 40rem;
     &__content {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 3vw;
         display: grid;
+        padding-bottom: 8vw;
+        position: relative;
+        border-top: 25px solid $border;
     }
     &__background {
         position: absolute;
@@ -17,23 +23,59 @@
         padding: 2rem;
     }
     &__image-wrapper {
-        padding: 2rem;
-        position: relative;
+        position: absolute;
+        border-top: 16px solid #fdf8f5;
+        width: 40%;
+        height: 50vw;
+        min-height: 400px;
+        max-height: 800px;
+        z-index: 100;
+        top: -80px;
+        right: 33px;
+        &:before {
+            content: "";
+            position: absolute;
+            background-color: $border;
+            height: 80px;
+            width: 16px;
+            top: -16px;
+            left: -16px;
+          }
+      
+          &:after {
+            content: "";
+            position: absolute;
+            background-color: $border;
+            height: 80px;
+            width: 16px;
+            top: -16px;
+            right: -16px;
+          }
     }
     
     &__logo {
-        width: 80px;
+        width: 100px;
         display: inline;
     }
     &__image {
-        width: 220px;
-        position: absolute;
-        top: -20px;
-        z-index: 99;
-        right: 31px;
         height: 100%;
         width: 100%;
         object-fit: cover;
+        position: absolute;
+        top: -1px;
+
+        // position: absolute;
+        // top: 80px;
+        // right: 0;
+        // border-top: 16px solid #fdf8f5;
+        // height: 50vw;
+        // min-height: 400px;
+        // max-height: 800px;
+        // max-width: 100%;
+        // display: block;
+        // top: -40px;
+        // right: 20px;
+        // z-index:99;
     }
     h2 {
         line-height: 1.3;

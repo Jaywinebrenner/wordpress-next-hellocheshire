@@ -7,6 +7,7 @@ import WestedgeTeam from '../../components/parts/WestedgeTeam';
 import WestedgeNav from '../../components/parts/WestedgeNav';
 import WestedgeOffice from '../../components/parts/WestedgeOffice';
 import Expandable from '../../components/parts/Expandable';
+import Elevation from '../../components/parts/Elevation';
 
 export default function Page({page}) {
 
@@ -52,6 +53,17 @@ export default function Page({page}) {
           main_image_url={layout.main_image.url}
           title={layout.title}
           content={layout.content}
+        />
+      )
+    }
+
+    if(
+      layout.acf_fc_layout === "elevations" 
+      ) {
+      return (
+        <Elevation
+          key={`westedge-elevation-${i}`}
+   
         />
       )
     }

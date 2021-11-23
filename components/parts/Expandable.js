@@ -7,7 +7,7 @@ export default function Expandable({background_image_url, main_image_url, logos,
 
   const [isMobile, setMobile] = useState(false)
 
-
+  console.log("Logos / Expand", logos)
   const updateMobile = () => {
     window.innerWidth <= 700 ?
       setMobile(true) :
@@ -35,8 +35,12 @@ export default function Expandable({background_image_url, main_image_url, logos,
         <div className="expandable__content">
             <div className="expandable__content-wrapper">
               <div className="expandable__logos">
-                <img className="expandable__logo" src="/images/expandable-well.png"/>
-                <img className="expandable__logo" src="/images/expandable-well.png"/>
+                {logos.map((logo, i) => {
+                  console.log("Logo url", logo)
+                  return (
+                    <img key={`expandable__logo-${i}`} className="expandable__logo" src={logo.logo.url}/>
+                  )
+                })}
               </div>
               <div className="expandable__title">
                 <h2>{title}</h2>
