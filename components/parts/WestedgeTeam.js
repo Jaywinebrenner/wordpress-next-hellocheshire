@@ -1,8 +1,29 @@
 
-
+import React, {useEffect, useState} from 'react';
 
 
 export default function WestedgeTeam({main_image_url, contact_row, content_row, sub_image_url}) {
+
+  const [isMobile, setMobile] = useState(false)
+
+
+  const updateMobile = () => {
+    window.innerWidth <= 700 ?
+      setMobile(true) :
+      setMobile(false);
+
+    window.addEventListener("resize", () => {
+      window.innerWidth <= 700 ?
+        setMobile(true) :
+        setMobile(false);
+    })
+
+  }
+  
+
+  useEffect(() => {
+    updateMobile()
+  }, [])
 
   console.log("contact row . contact", contact_row[0].contact)
 
@@ -45,6 +66,10 @@ export default function WestedgeTeam({main_image_url, contact_row, content_row, 
         </div>
 
       </div>
+
+      {
+        isMobile && <hr></hr>
+      }
 
 
       <div className="westedge-team--contact-wrapper">

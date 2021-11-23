@@ -5,12 +5,15 @@ import React, { useState } from 'react';
 
 import WestedgeTeam from '../../components/parts/WestedgeTeam';
 import WestedgeNav from '../../components/parts/WestedgeNav';
+import WestedgeOffice from '../../components/parts/WestedgeOffice';
+import Expandable from '../../components/parts/Expandable';
 
 export default function Page({page}) {
 
     console.log("WE PAGE", page);
 
   const builderArray = page[0]?.acf.builder?.map((layout, i) => {
+
     if(layout.acf_fc_layout === "team") {
       return (
         <WestedgeTeam
@@ -21,7 +24,40 @@ export default function Page({page}) {
             main_image_url={layout.main_image.url}
         />
       )
-    }})
+    }
+
+    if(
+      layout.acf_fc_layout === "page_title" 
+      ) {
+      return (
+        <WestedgeOffice
+            key={`westedge-office-${i}`}
+            content={layout.content}
+            title={layout.title}
+            sub_image_url={layout.sub_image.url}
+            video_url={layout.background_video}
+            main_image_url={layout.main_image.url}
+        />
+      )
+    }
+
+    if(
+      layout.acf_fc_layout === "expandable_content" 
+      ) {
+      return (
+        <Expandable
+          key={`westedge-expandable-${i}`}
+          logos={layout.logos}
+          background_image_url={layout.background_image.url}
+          main_image_url={layout.main_image.url}
+          title={layout.title}
+          content={layout.content}
+        />
+      )
+    }
+    
+  
+  })
 
   return (
     <div className="westedge">

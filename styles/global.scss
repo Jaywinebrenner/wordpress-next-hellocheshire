@@ -10,6 +10,8 @@
 @import "components/medtech.scss";
 @import "components/westedgeTeam.scss";
 @import "components/westedgeNav.scss";
+@import "components/westedgeOffice.scss";
+@import "components/expandable.scss";
 
 $primary: #fdf8f5;
 
@@ -21,6 +23,7 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  box-sizing: border-box;
 }
 
 * {
@@ -43,6 +46,7 @@ img {
 
 
 .westedge{
+  position: relative;
   &__nav {
     background-color: rgb(231,222,219);
     height: 50px;

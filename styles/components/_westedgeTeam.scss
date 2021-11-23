@@ -2,13 +2,20 @@
 $primary: #fdf8f5;
 
 .westedge-team {
+    hr {
+        height: 2px;
+        width: 200%;
+        background: linear-gradient(
+        90deg,#ff2700,#ff8700 60.01%,rgba(255,132,0,.69) 99.49%);
+        margin-bottom: 3vh;
+    }
     padding: 30px;
     // padding: 0 30px 30px 30px;
     background-color: $primary;
     &--top {
         display: flex;
         flex-direction: row;
-        margin-top: 4rem;
+        margin-top: 8rem;
         @media only screen and (max-width: 900px) {
             flex-direction: column-reverse;
             .westedge-team--top--images {
@@ -32,13 +39,7 @@ $primary: #fdf8f5;
                     margin: 0 0 10px 0;
                 }
             }
-            hr {
-                height: 2px;
-                width: 200%;
-                background: linear-gradient(
-                90deg,#ff2700,#ff8700 60.01%,rgba(255,132,0,.69) 99.49%);
-                margin-bottom: 3vh;
-            }
+
             .content {
                 &--row{
                     &--image-wrapper {
@@ -89,6 +90,11 @@ $primary: #fdf8f5;
         display: grid;
         width: 77%;
         margin-bottom: 8rem;
+        @media only screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
+            gap: 10vw;
+
+        }
       }
     .contact-col {
         background-color: $primary;
@@ -108,5 +114,12 @@ $primary: #fdf8f5;
             font-weight: bold;
         }
       }
+      hr {
+        height: 2px;
+        width: 200%;
+        background: linear-gradient(
+        90deg,#ff2700,#ff8700 60.01%,rgba(255,132,0,.69) 99.49%);
+        margin-bottom: 3vh;
+    }
       
 }
