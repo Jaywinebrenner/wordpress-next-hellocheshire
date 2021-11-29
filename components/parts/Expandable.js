@@ -1,13 +1,21 @@
 
 
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
+import Button from '../Button.js'
 
 
 export default function Expandable({background_image_url, main_image_url, logos, title, content}) {
 
-  const [isMobile, setMobile] = useState(false)
+  const [isMobile, setMobile] = useState(false);
 
-  console.log("Logos / Expand", logos)
+  // Toggleing textContent via Ref
+  const contentRef = useRef(null);
+  const handleButtonClick = () => {
+    console.log("BUTTON CLICK", contentRef)
+    contentRef.current.classList.toggle("expandable__textContent--active");
+  }
+
+
   const updateMobile = () => {
     window.innerWidth <= 700 ?
       setMobile(true) :
@@ -18,11 +26,10 @@ export default function Expandable({background_image_url, main_image_url, logos,
         setMobile(true) :
         setMobile(false);
     })
-
   }
   
   useEffect(() => {
-    updateMobile()
+    updateMobile();
   }, [])
 
 
@@ -36,7 +43,6 @@ export default function Expandable({background_image_url, main_image_url, logos,
             <div className="expandable__content-wrapper">
               <div className="expandable__logos">
                 {logos.map((logo, i) => {
-                  console.log("Logo url", logo)
                   return (
                     <img key={`expandable__logo-${i}`} className="expandable__logo" src={logo.logo.url}/>
                   )
@@ -45,9 +51,17 @@ export default function Expandable({background_image_url, main_image_url, logos,
               <div className="expandable__title">
                 <h2>{title}</h2>
               </div>
-              <div className="expandable__body">
-                <div dangerouslySetInnerHTML={{ __html: content}}/>
-              </div>
+
+              {/* <div onClick={handleButtonClick} className={`expandable__read-more-btn ${!isMobile ? "hide-button" : ""}`}>Read More</div> */}
+ 
+                {isMobile && <Button onClick={handleButtonClick} text={"Read More"} type="hr"  />}
+     
+         
+
+                <div className="expandable__body">
+                  <div className="expandable__textContent" ref={contentRef} dangerouslySetInnerHTML={{ __html: content}}/>
+                </div>
+          
 
             </div>
             <div className="expandable__image-wrapper">

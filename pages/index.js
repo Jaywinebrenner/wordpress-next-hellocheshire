@@ -12,7 +12,6 @@ import WestedgeTeam from '../components/parts/WestedgeTeam';
 
 export default function Page({page, westedgeTeam}) {
 
-  console.log("westedge team", westedgeTeam)
 
   const [isHeroOpen, setIsHeroOpen]  = useState(true);
   const toggleHero = () => {

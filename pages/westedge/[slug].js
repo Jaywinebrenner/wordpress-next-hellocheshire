@@ -63,6 +63,7 @@ export default function Page({page}) {
       return (
         <Elevation
           key={`westedge-elevation-${i}`}
+          elevations={layout.elevations}
    
         />
       )

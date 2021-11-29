@@ -25,7 +25,6 @@ export default function WestedgeTeam({main_image_url, contact_row, content_row, 
     updateMobile()
   }, [])
 
-  console.log("contact row . contact", contact_row[0].contact)
 
   return (
     <div className="westedge-team">
@@ -74,7 +73,6 @@ export default function WestedgeTeam({main_image_url, contact_row, content_row, 
 
       <div className="westedge-team--contact-wrapper">
           {contact_row.map((contact, i) => {
-              console.log("contact",contact)
               return (
                 <>
                   <div className="contact-col" key={`contact-col-${i}`}>

@@ -10,6 +10,9 @@ $border: #fdf8f5;
         padding-bottom: 8vw;
         position: relative;
         border-top: 25px solid $border;
+        @media only screen and (max-width: 750px) {
+            grid-template-columns: 1fr;
+          }
     }
     &__background {
         position: absolute;
@@ -21,6 +24,10 @@ $border: #fdf8f5;
     }
     &__content-wrapper {
         padding: 2rem;
+        @media only screen and (max-width: 750px) {
+            padding-top: 22rem;
+            text-align: center;
+          }
     }
     &__image-wrapper {
         position: absolute;
@@ -32,6 +39,9 @@ $border: #fdf8f5;
         z-index: 100;
         top: -80px;
         right: 33px;
+        @media only screen and (max-width: 750px) {
+            width: 80%;
+          }
         &:before {
             content: "";
             position: absolute;
@@ -63,20 +73,43 @@ $border: #fdf8f5;
         object-fit: cover;
         position: absolute;
         top: -1px;
-
-        // position: absolute;
-        // top: 80px;
-        // right: 0;
-        // border-top: 16px solid #fdf8f5;
-        // height: 50vw;
-        // min-height: 400px;
-        // max-height: 800px;
-        // max-width: 100%;
-        // display: block;
-        // top: -40px;
-        // right: 20px;
-        // z-index:99;
     }
+    &__read-more-btn {
+        cursor: pointer;
+        border-color: #dabfae;
+        color: #373332;
+        background-color: #fdf8f5;
+        font-size: 16px;
+        // line-height: 135%;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all .3s;
+        display: inline-block;
+        border: 2px solid #dabfae;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 2px 10px;
+    }
+
+    //TOGGLING TEXT ON MOBILE USING REFS
+    &__textContent {
+        @media only screen and (max-width: 750px) {
+          opacity: 0;
+          height: 0px;
+        }
+        &--active {
+          opacity: 1;
+          height: auto;
+          animation: fadeTextIn 1.5s ease-out;
+        }
+      }
+ 
+    .hide-button {
+        display: none;
+    }
+
     h2 {
         line-height: 1.3;
     }

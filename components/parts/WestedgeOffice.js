@@ -4,8 +4,6 @@ import React, {useEffect, useState} from 'react';
 
 export default function WestedgeOffice({main_image_url, sub_image_url, title, content, video_url}) {
 
-  console.log("AT WESTEDGE OFFICE")
-
   const [isMobile, setMobile] = useState(false)
 
   const updateMobile = () => {

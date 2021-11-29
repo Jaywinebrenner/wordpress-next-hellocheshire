@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg id="elevation" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1500 1032" style="enable-background:new 0 0 1500 1032;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{fill:url(#SVGID_4_);}
+	.st4{fill:url(#SVGID_5_);}
+	.st5{fill:url(#SVGID_6_);}
+	.st6{fill:url(#SVGID_7_);}
+	.st7{fill:url(#SVGID_8_);}
+</style>
+<g id="f1">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="240.8915" y1="923.4013" x2="1406.6101" y2="923.4013">
+		<stop  offset="0" style="stop-color:#FDB524"/>
+		<stop  offset="1" style="stop-color:#F15822"/>
+	</linearGradient>
+	<polygon class="st0" points="240.89,912.94 240.89,963.87 1406.61,963.87 1406.61,916.42 1254.24,898.01 552.66,882.94 	"/>
+</g>
+<g id="f2">
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="240.845" y1="828.5178" x2="1406.6101" y2="828.5178">
+		<stop  offset="0" style="stop-color:#FDB524"/>
+		<stop  offset="1" style="stop-color:#F15822"/>
+	</linearGradient>
+	<polygon class="st1" points="240.84,740.61 240.89,912.94 552.66,882.94 1254.24,898.01 1406.61,916.42 1406.61,821.14
+		1221.91,792.47 556.01,740.61 	"/>
+</g>
+<g id="f3">
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="125.1243" y1="704.4112" x2="1406.6101" y2="704.4112">
+		<stop  offset="0" style="stop-color:#FDB524"/>
+		<stop  offset="1" style="stop-color:#F15822"/>
+	</linearGradient>
+	<polygon class="st2" points="1406.61,821.14 1221.91,792.47 556.01,740.61 234.52,740.61 132.26,700.15 132.66,596.33
+		125.12,587.68 1219.08,712.15 1406.61,750.66 	"/>
+</g>
+<g id="f4">
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="121.2173" y1="612.7972" x2="1406.6101" y2="612.7972">
+		<stop  offset="0" style="stop-color:#FDB524"/>
+		<stop  offset="1" style="stop-color:#F15822"/>
+	</linearGradient>
+	<polygon class="st3" points="1406.61,750.66 1219.08,712.15 125.12,587.68 150.8,587.68 151.91,501.17 121.22,474.94
+		1220.58,630.75 1406.61,686.47 	"/>
+</g>
+<g id="f5">
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="121.2173" y1="523.4951" x2="1464.0984" y2="523.4951">
+		<stop  offset="0" style="stop-color:#FDB524"/>
+		<stop  offset="1" style="stop-color:#F15822"/>
+	</linearGradient>
+	<polygon class="st4" points="1464.1,665.26 1406.61,686.47 1220.58,630.75 121.22,474.94 136.57,465.17 135.73,368.89
+		125.12,360.52 1464.1,591.77 1455.35,595.87 	"/>
+</g>
+<g id="f6">
+	<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="116.4731" y1="417.5418" x2="1467.2611" y2="417.5418">
+		<stop  offset="0" style="stop-color:#FDB524"/>
+		<stop  offset="1" style="stop-color:#F15822"/>
+	</linearGradient>
+	<polyline class="st5" points="1464.1,591.77 1448.66,583.96 1448.66,530.38 1467.26,523.68 116.47,243.31 155.82,276.8
+		156.66,360.52 125.12,356.33 125.12,360.52 	"/>
+</g>
+<g id="f7">
+	<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="172.2686" y1="364.7978" x2="1467.2611" y2="364.7978">
+		<stop  offset="0" style="stop-color:#FDB524"/>
+		<stop  offset="1" style="stop-color:#F15822"/>
+	</linearGradient>
+	<polygon class="st6" points="172.27,254.89 180.94,205.91 750,281.82 1371.45,426.66 1373.12,431.68 1352.47,433.36
+		1353.31,478.56 1467.26,508.43 1467.26,523.68 	"/>
+</g>
+<g id="f8">
+	<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="180.9381" y1="262.1468" x2="1371.4474" y2="262.1468">
+		<stop  offset="0" style="stop-color:#FDB524"/>
+		<stop  offset="1" style="stop-color:#F15822"/>
+	</linearGradient>
+	<polygon class="st7" points="188.47,97.64 196.01,113.54 180.94,205.91 750,281.82 1371.45,426.66 1371.45,407.4 1276.84,385.63
+		1275.45,310.29 1162.7,274.57 1155.45,280.7 1121.96,262.15 1113.03,269.54 1073.96,246.66 1070.61,257.26 1031.54,236.61
+		1024.84,246.1 983.54,226.01 978.52,231.59 939.45,213.17 932.19,218.75 888.66,196.98 882.52,202.57 832.84,182.47 832.84,191.4
+		779.82,167.4 778.7,175.77 726.8,152.33 727.36,166.84 664.29,134.47 664.29,144.52 610.15,122.47 609.31,128.61 555.17,109.91
+		555.45,145.91 	"/>
+</g>
+</svg>
