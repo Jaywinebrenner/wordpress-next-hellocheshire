@@ -1,0 +1,53 @@
+
+
+.office {
+  min-height: 400px;
+  background-color: rgb(253,248,245);
+  &__section {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 50px;
+      padding: 3rem 1rem 3rem 3rem;
+      position: relative;
+      .left {
+        margin-top: 180px;
+        margin-left: 100px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 230px;
+          left: 154px;
+          width: 100px;
+          height: 2px;
+          background: red;
+        }
+        h2 {
+          font-size: 2.2rem;
+          line-height: normal;
+          line-height: initial;
+          font-family: serif;
+          margin: 0;
+        }
+        p {
+          font-size: 16px;
+          line-height: 30px;
+          font-weight: 100;
+          font-feature-settings: "liga" off;
+        }
+
+      }
+      .right {
+        img {
+          width: 50vw;
+          height: 50vw;
+          max-width: 550px;
+          max-height: 550px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+      }
+    }
+  }
+}

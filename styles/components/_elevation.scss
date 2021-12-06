@@ -4,16 +4,47 @@
     border: 45px solid #e9e4e1;
     position: relative;
     @media only screen and (max-width: 750px) {
-      padding: 0 3rem;
+      // padding: 0 3rem;
     }
-    &__circle {
-      width: 350px;
-      position: absolute;
-    }
+
+      &__circle {
+        // position: absolute;
+        // z-index: 1;
+        // pointer-events: none;
+        // top: -20vh;
+        // right: -150px;
+        // width: 25vw;
+        // height: 25vw;
+        // max-width: 400px;
+        // max-height: 400px;
+        // object-fit: cover;
+        // background-color: white;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // border-radius: 50%;
+        background-image: url("/images/clouds/clouds3.png");
+        width: 25vw;
+        height: 25vw;
+        border-radius: 50%;
+        position: absolute;
+        right: -158px;
+        top: -126px;
+        background-color: white;
+    
+        @media (max-width: 750px) {
+          right: -80px;
+          min-width: 150px;
+          min-height: 150px;
+        }
+      }
+
     &__infoWrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 3vw;
+      @media only screen and (max-width: 750px) {
+        grid-template-columns: 1fr;
+      }
     }
     &__infoWrapper--download {
       text-transform: uppercase;
@@ -31,9 +62,15 @@
     }
     &__infoWrapper--left {
       padding: 3rem 0 3rem 3rem;
+      @media only screen and (max-width: 750px) {
+        padding: 3rem 0 1rem 20px;
+      }
     }
     &__infoWrapper--right {
       padding: 3rem;
+      @media only screen and (max-width: 750px) {
+        padding: 0 0 3rem 20px;
+      }
     }
     &__interactive {
       display: flex;
@@ -124,18 +161,18 @@
       margin: 0;
       line-height: 1;
     }
-    h6 {
-      font-size: x-large;
-      margin: 0;
-      padding: 0;
-      cursor: pointer;
-      background: gray;
-      color: white;
-      min-height: 9px;
-      height: 23px;
-      min-width: 23px;
-      margin-bottom: 5px;
-      line-height: .9;
-    }
+    // h6 {
+    //   font-size: x-large;
+    //   margin: 0;
+    //   padding: 0;
+    //   cursor: pointer;
+    //   background: gray;
+    //   color: white;
+    //   min-height: 9px;
+    //   height: 23px;
+    //   min-width: 23px;
+    //   margin-bottom: 5px;
+    //   line-height: .9;
+    // }
 
 }

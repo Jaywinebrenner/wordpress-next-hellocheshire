@@ -51,8 +51,6 @@ export default function Expandable({background_image_url, main_image_url, logos,
               <div className="expandable__title">
                 <h2>{title}</h2>
               </div>
-
-              {/* <div onClick={handleButtonClick} className={`expandable__read-more-btn ${!isMobile ? "hide-button" : ""}`}>Read More</div> */}
  
                 {isMobile && <Button onClick={handleButtonClick} text={"Read More"} type="hr"  />}
      

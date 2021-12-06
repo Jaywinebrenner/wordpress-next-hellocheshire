@@ -1,6 +1,7 @@
 
 
-export default function Medtech({navTextOne, navTextTwo, navTextThree, navTextFour, title, description, image, navIcon}) {
+export default function Medtech({navTextOne, navTextTwo, navTextThree, navTextFour, title, description, image, navIcon, imageLeft}) {
+
 
   return (
     <div className="medtech">
@@ -17,14 +18,6 @@ export default function Medtech({navTextOne, navTextTwo, navTextThree, navTextFo
                 <a>{navTextFour}</a>
             </div>
 
-            {/* <div className="navbar-container--top-wrapper small-screen">
-                <a>{navTextOne}</a>
-                <a>{navTextTwo}</a>
-            </div>
-            <div className="navbar-container--bottom-wrapper small-screen">
-                <a>{navTextThree}</a>
-                <a>{navTextFour}</a>
-            </div> */}
 
         </div>
 
@@ -34,13 +27,13 @@ export default function Medtech({navTextOne, navTextTwo, navTextThree, navTextFo
                 <h1>{title}</h1>
                 <p>{description}</p>
             </div>
-            <div className="medtech__navbar-body--right-col">
+            {/* <div className="medtech__navbar-body--right-col"> */}
+            <div className={`medtech__navbar-body--right-col ${imageLeft ? 'reverse' : ''}`}>
                 <img className="medtech__navbarbody--icon" src={image}/> 
             </div>
 
         </div>
-      
-
+    
     </div>
   )
 }

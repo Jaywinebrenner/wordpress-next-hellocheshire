@@ -8,6 +8,7 @@ import WestedgeNav from '../../components/parts/WestedgeNav';
 import WestedgeOffice from '../../components/parts/WestedgeOffice';
 import Expandable from '../../components/parts/Expandable';
 import Elevation from '../../components/parts/Elevation';
+import OfficeSection from '../../components/parts/OfficeSection';
 
 export default function Page({page}) {
 
@@ -64,6 +65,20 @@ export default function Page({page}) {
         <Elevation
           key={`westedge-elevation-${i}`}
           elevations={layout.elevations}
+   
+        />
+      )
+    }
+
+    if(
+      layout.acf_fc_layout === "office_section" 
+      ) {
+      return (
+        <OfficeSection
+          key={`westedge-elevation-${i}`}
+          copy_1={layout.copy_1}
+          copy_2={layout.copy_2}
+          copy_3={layout.copy_3}
    
         />
       )

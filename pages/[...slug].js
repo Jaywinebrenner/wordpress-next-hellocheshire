@@ -125,6 +125,7 @@ export default function Page({page, westedgeTeam}) {
             description={layout.description}
             image={layout.image.url}
             navIcon={layout.nav_icon.url}
+            imageLeft={layout.image_left}
         />
       )
     };

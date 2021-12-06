@@ -7,7 +7,7 @@ $border: #fdf8f5;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 3vw;
         display: grid;
-        padding-bottom: 8vw;
+        padding-bottom: 3vw;
         position: relative;
         border-top: 25px solid $border;
         @media only screen and (max-width: 750px) {

@@ -9,6 +9,7 @@ import Footer from '../components/parts/Footer';
 import Medtech from '../components/parts/Medtech';
 import Navbar from '../components/parts/Navbar';
 import WestedgeTeam from '../components/parts/WestedgeTeam';
+import Condictional from '../components/parts/Condictional';
 
 export default function Page({page, westedgeTeam}) {
 
@@ -38,6 +39,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "westedge") {
       return (
         <WestedgeTeam
+             key={`builder-${i}`}
             contact_row={contact_row}
         />
       )
@@ -46,6 +48,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "about_content") {
       return (
         <AboutContent
+            key={`builder-${i}`}
             title={layout.title}
             url={layout.image.url}
             description={layout.description}
@@ -66,6 +69,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "user_content") {
       return (
         <UserContent
+            key={`builder-${i}`}
             name={layout.name}
             image={layout.image}
             email={layout.email}
@@ -77,6 +81,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "home_content") {
       return (
         <HomeContent
+            key={`builder-${i}`}
             title={layout.site_title}
             description={layout.site_description}
             url={layout.site_image.url}
@@ -88,6 +93,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "info") {
       return (
         <Info
+            key={`builder-${i}`}
             title={layout.title}
             body={layout.body}
             url={layout.image.url}
@@ -99,6 +105,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "footer") {
       return (
         <Footer
+          key={`builder-${i}`}
           header={layout.header}
           buttonOneText={layout.button_one_text}
           buttonTwoText={layout.button_two_text}
@@ -117,6 +124,7 @@ export default function Page({page, westedgeTeam}) {
       const navTextTwo = layout.nav_text_one.toUpperCase();
       return (
         <Medtech
+            key={`builder-${i}`}
             navTextOne={navTextOne}
             navTextTwo={navTextTwo}
             navTextThree={layout.nav_text_three}
@@ -125,6 +133,30 @@ export default function Page({page, westedgeTeam}) {
             description={layout.description}
             image={layout.image.url}
             navIcon={layout.nav_icon.url}
+            imageLeft={layout.image_left}
+        />
+      )
+    };
+
+    if(layout.acf_fc_layout === "condictional") {
+
+      return (
+        <Condictional
+            key={`builder-${i}`}
+            title={layout.title}
+            body={layout.body}
+            imageOne={layout.image_one.url}
+            imageTwo={layout.image_two.url}
+            buttonText={layout.button_text}
+            buttonLink={layout.button_link}
+            showButton={layout.show_button}
+            showImage={layout.show_image}
+            backgroundImage={layout.background_image.url}
+            radioOption={layout.radio}
+            radioOptionOne={layout.radio_option_one.url}
+            radioOptionTwo={layout.radio_option_two.url}
+            radioOptionThree={layout.radio_option_three.url}
+
         />
       )
     };

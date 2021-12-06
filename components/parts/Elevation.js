@@ -59,12 +59,10 @@ export default function Elevation({elevations}) {
 
             <div className="elevation__interactive--controls">
               <div className="elevation__interactive--controls-top">
-                <h6>+</h6>
-                {/* <PlusSVG /> */}
+                <PlusSVG />
               </div>
               <div className="elevation__interactive--controls-bottom">
-                <h6>-</h6>
-                {/* <MinusSVG /> */}
+                <MinusSVG />
               </div>
             </div>
 
