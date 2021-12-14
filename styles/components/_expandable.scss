@@ -9,7 +9,7 @@ $border: #fdf8f5;
         display: grid;
         padding-bottom: 3vw;
         position: relative;
-        border-top: 25px solid $border;
+        border-top: 16px solid $border;
         @media only screen and (max-width: 750px) {
             grid-template-columns: 1fr;
           }
@@ -46,7 +46,7 @@ $border: #fdf8f5;
             content: "";
             position: absolute;
             background-color: $border;
-            height: 80px;
+            height: 74px;
             width: 16px;
             top: -16px;
             left: -16px;
@@ -56,7 +56,7 @@ $border: #fdf8f5;
             content: "";
             position: absolute;
             background-color: $border;
-            height: 80px;
+            height: 74px;
             width: 16px;
             top: -16px;
             right: -16px;

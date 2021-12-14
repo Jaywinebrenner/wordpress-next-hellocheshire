@@ -3,10 +3,16 @@
 export default function Hero({title, url, toggleHero}) {
 
   return (
-    <div className="hero__container">
-        <h3 onClick={() => toggleHero()}>x</h3>
+    <div 
+    // style={{ 
+    //   backgroundImage: `url(${url})`, backgroundRepeat: "no-repeat, repeat", backgroundSize: "100% 100%"
+    // }} 
+    className="hero">
+        <h3 className="hero__x" onClick={() => toggleHero()}>x</h3>
         <h1>{title}</h1>
-        <img src={url}/> 
+        <div className="hero__background"> 
+          <img src={url}/> 
+        </div>
     </div>
   )
 }

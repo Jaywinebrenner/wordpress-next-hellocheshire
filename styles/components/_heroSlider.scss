@@ -1,0 +1,24 @@
+
+.hero-slider {
+    min-height: 50vh;
+    background-color: #E0E0E0;
+    text-align: center;
+    padding: 2rem 2rem 4rem 2rem;
+    .slick-arrow {
+        color: red;
+    }
+    .inner-slider {
+        // background-color: rgb(235, 238, 171);
+    }
+    h1 {
+        margin: 0 0 30px 0;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    &__image {
+        width: 230px;
+        border-radius: 50%;
+        margin: auto;
+    }
+}

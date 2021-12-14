@@ -9,6 +9,7 @@ import Footer from '../components/parts/Footer';
 import Medtech from '../components/parts/Medtech';
 import Navbar from '../components/parts/Navbar';
 import WestedgeTeam from '../components/parts/WestedgeTeam';
+import HeroSlider from '../components/parts/HeroSlider';
 
 export default function Page({page, westedgeTeam}) {
 
@@ -22,11 +23,12 @@ export default function Page({page, westedgeTeam}) {
 
     // const image = page[0]._embedded['wp:featuredmedia'][0].source_url
 
-  const builderArray = page[0]?.acf.builder?.map((layout) => {
+  const builderArray = page[0]?.acf.builder?.map((layout, i) => {
 
     if(layout.acf_fc_layout === "navbar") {
       return (
           <Navbar
+              key={`navbar-${i}`}
               title={layout.title}
               link_one={layout.link_one}
               link_two={layout.link_two}
@@ -38,17 +40,8 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "westedge") {
       return (
         <WestedgeTeam
+            key={`westedge-team-${i}`}
             contact_row={contact_row}
-        />
-      )
-    };
-
-    if(layout.acf_fc_layout === "about_content") {
-      return (
-        <AboutContent
-            title={layout.title}
-            url={layout.image.url}
-            description={layout.description}
         />
       )
     };
@@ -56,6 +49,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "hero" && isHeroOpen) {
       return (
         <Hero
+            key={`hero-${i}`}
             title={layout.hero_title}
             url={layout.hero_image.url}
             toggleHero={toggleHero}
@@ -66,6 +60,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "user_content") {
       return (
         <UserContent
+            key={`user-content-${i}`}
             name={layout.name}
             image={layout.image}
             email={layout.email}
@@ -77,6 +72,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "home_content") {
       return (
         <HomeContent
+            key={`home-content-${i}`}
             title={layout.site_title}
             description={layout.site_description}
             url={layout.site_image.url}
@@ -88,6 +84,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "info") {
       return (
         <Info
+            key={`info-${i}`}
             title={layout.title}
             body={layout.body}
             url={layout.image.url}
@@ -99,6 +96,7 @@ export default function Page({page, westedgeTeam}) {
     if(layout.acf_fc_layout === "footer") {
       return (
         <Footer
+          key={`footer-${i}`}
           header={layout.header}
           buttonOneText={layout.button_one_text}
           buttonTwoText={layout.button_two_text}
@@ -117,6 +115,7 @@ export default function Page({page, westedgeTeam}) {
       const navTextTwo = layout.nav_text_one.toUpperCase();
       return (
         <Medtech
+            key={`medtech-${i}`}
             navTextOne={navTextOne}
             navTextTwo={navTextTwo}
             navTextThree={layout.nav_text_three}
@@ -127,6 +126,15 @@ export default function Page({page, westedgeTeam}) {
             navIcon={layout.nav_icon.url}
             imageLeft={layout.image_left}
         />
+      )
+    };
+
+    if(layout.acf_fc_layout === "hero_slider") {
+      return (
+        <HeroSlider
+            key={`hero-slider-${i}`}
+            people={layout.image_repeater}
+          />
       )
     };
 
