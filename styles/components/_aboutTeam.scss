@@ -2,13 +2,43 @@
 .aboutTeam {
     text-align: center;
     height: 30vh;
+    position: relative;
     &__background {
         position: absolute;
         width: 100%;
         height: 50vh;
         position: absolute;
         z-index: -1;
-        top: 934px;
+        top: 0;
+        @media only screen and (max-width: 750px) {
+            height: 100vh;
+          }
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        @media only screen and (max-width: 750px) {
+            display: inline-block;
+            margin-bottom: 30px;
+            div:last-child {
+                margin-bottom: 0;
+            }
+          }
+    }
+    &__pick-div {
+        @media only screen and (max-width: 750px) {
+            margin-bottom: 30px;
+          }
+    }
+    &__circle-container {
+        height: 150px;
+        width: 150px;
+        .circle-image {
+            border-radius: 50%;
+        }
+        @media only screen and (max-width: 750px) {
+            margin-bottom: 30px;
+        }
     }
     img {
         width: 100%;
@@ -53,5 +83,12 @@ input[type="radio"] {
   input[type="radio"]:focus {
     outline: max(2px, 0.15em) solid currentColor;
     outline-offset: max(2px, 0.15em);
+  }
+  h1 {
+      margin: 0;
+      padding-top: 20px;
+  }
+  h4 {
+      margin-top: 3px;
   }
 }

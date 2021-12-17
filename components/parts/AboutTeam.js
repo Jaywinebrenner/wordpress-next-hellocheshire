@@ -25,46 +25,61 @@ export default function AboutTeam({background}) {
     return (
 
         <div className="aboutTeam">
+            <h1>About Our Team</h1>
+            <h4>Pick our Team Background if you please</h4>
             <div className="aboutTeam__background">
                 {(currentBackground === "One") && <img src="/images/psychedelic1.svg"/>}
                 {(currentBackground === "Two") && <img src="/images/psychedelic2.svg"/>}
                 {(currentBackground === "Three") && <img src="/images/psychedelic3.svg"/>}
             </div>
-            <h1>About Our Team</h1>
-            <h4>Pick our Team Background if you please</h4>
 
-        <form onClick={event => setCurrentBackground(event.target.value)}>
-            <label>
-                <input 
-                type="radio" 
-                value="One"
-                name="Background Option"
-                onChange={handleChange}
-                checked={currentBackground === "One"}
-                /> 
-            Radio label text
-        </label>
-        <label>
-            <input 
-            type="radio" 
-            value="Two"
-            name="Background Option" 
-            onChange={handleChange}
-            checked={currentBackground === "Two"}
-            /> 
-            Radio label text
-        </label>
-        <label>
-            <input 
-            type="radio" 
-            value="Three"
-            name="Background Option" 
-            onChange={handleChange}
-            checked={currentBackground === "Three"}
-            /> 
-           Radio label text
-        </label>
-        </form>
+            <div className="aboutTeam__container">
+                <div className="aboutTeam__pick-div">
+                    <form onClick={event => setCurrentBackground(event.target.value)}>
+                        <label>
+                            <input 
+                            type="radio" 
+                            value="One"
+                            name="Background Option"
+                            onChange={handleChange}
+                            checked={currentBackground === "One"}
+                            /> 
+                        Background #1
+                        </label>
+                        <label>
+                            <input 
+                            type="radio" 
+                            value="Two"
+                            name="Background Option" 
+                            onChange={handleChange}
+                            checked={currentBackground === "Two"}
+                            /> 
+                            Background #2
+                        </label>
+                        <label>
+                            <input 
+                            type="radio" 
+                            value="Three"
+                            name="Background Option" 
+                            onChange={handleChange}
+                            checked={currentBackground === "Three"}
+                            /> 
+                        Background #3
+                        </label>
+                    </form>
+
+                </div>
+                <div className="aboutTeam__circle-container">
+                    <img className="circle-image" src="/images/p-circle1.svg"/>
+                </div>
+                <div className="aboutTeam__circle-container">
+                    <img className="circle-image" src="/images/p-circle2.svg"/>
+                </div>
+                <div className="aboutTeam__circle-container">
+                    <img className="circle-image" src="/images/p-circle3.svg"/>
+                </div>
+
+            </div>
 
         </div>
     )
