@@ -10,6 +10,7 @@ import Medtech from '../components/parts/Medtech';
 import Navbar from '../components/parts/Navbar';
 import WestedgeTeam from '../components/parts/WestedgeTeam';
 import HeroSlider from '../components/parts/HeroSlider';
+import AboutTeam from '../components/parts/AboutTeam';
 
 export default function Page({page, westedgeTeam}) {
 
@@ -134,6 +135,15 @@ export default function Page({page, westedgeTeam}) {
         <HeroSlider
             key={`hero-slider-${i}`}
             people={layout.image_repeater}
+          />
+      )
+    };
+
+    if(layout.acf_fc_layout === "about_team") {
+      return (
+        <AboutTeam
+            key={`hero-slider-${i}`}
+            background={layout.background}
           />
       )
     };

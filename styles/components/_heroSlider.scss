@@ -1,24 +1,37 @@
 
 .hero-slider {
-    min-height: 50vh;
+
+    // background: url(/images/psychedelic1.svg)no-repeat center center fixed;
+    // background-size: cover;
+    // background-repeat: no-repeat, repeat;
+
     background-color: #E0E0E0;
     text-align: center;
     padding: 2rem 2rem 4rem 2rem;
-    .slick-arrow {
-        color: red;
+    &__background {
+        width: 100%;
+        display: flex!important;
+        flex-direction: column;
     }
-    .inner-slider {
-        // background-color: rgb(235, 238, 171);
+    &__text-container {
+        width: 50vw;
+        margin: auto;
+        padding: 20px;
     }
-    h1 {
-        margin: 0 0 30px 0;
-    }
-    p {
-        margin-bottom: 0;
-    }
-    &__image {
-        width: 230px;
+    &__small-image {
+        width: 130px;
         border-radius: 50%;
         margin: auto;
+        margin-bottom: 20px;
+    }
+    h1 {
+        margin: 0 0 0px 0;
+    }
+    p {
+        margin: 0;
+    }
+    .active {
+        border: 5px solid red;
     }
 }
+
